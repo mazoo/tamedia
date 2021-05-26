@@ -139,25 +139,25 @@ CREATE TABLE IF NOT EXISTS `tamedia_listings` (
 -- auto-generated definition
 create table tamedia_listings
 (
-    type                                  varchar(64) charset utf8  null,
-    `record.saleType`                     varchar(256) charset utf8 null,
-    `record.source`                       varchar(256) charset utf8 null,
-    `record.language`                     varchar(3) charset utf8   null,
-    `record.originalPropertyCategory`     varchar(64) charset utf8  null,
-    `record.propertyCategory`             varchar(64) charset utf8  null,
-    `record.sellerType`                   varchar(256) charset utf8 null,
+    type                                  varchar(64)   null,
+    `record.saleType`                     varchar(256)  null,
+    `record.source`                       varchar(256)  null,
+    `record.language`                     varchar(3)    null,
+    `record.originalPropertyCategory`     varchar(64)   null,
+    `record.propertyCategory`             varchar(64)   null,
+    `record.sellerType`                   varchar(256)  null,
     `record.price`                        float                     null,
     `record.netPrice`                     float                     null,
-    `record.publishedDate`                int unsigned           null,
-    `record.propertyLocation.region`      varchar(256) charset utf8 null,
-    `record.propertyLocation.canton`      varchar(256) charset utf8 null,
-    `record.propertyLocation.cantonCode`  varchar(256) charset utf8 null,
-    `record.propertyLocation.country`     varchar(256) charset utf8 null,
-    `record.propertyLocation.countryCode` varchar(256) charset utf8 null,
-    `record.propertyLocation.city`        varchar(256) charset utf8 null,
-    `record.propertyLocation.street`      varchar(256) charset utf8 null,
+    `record.publishedDate`                int          default 0,
+    `record.propertyLocation.region`      varchar(256)  null,
+    `record.propertyLocation.canton`      varchar(256)  null,
+    `record.propertyLocation.cantonCode`  varchar(256)  null,
+    `record.propertyLocation.country`     varchar(256)  null,
+    `record.propertyLocation.countryCode` varchar(256)  null,
+    `record.propertyLocation.city`        varchar(256)  null,
+    `record.propertyLocation.street`      varchar(256)  null,
     `record.propertyLocation.zip`         int                       null
-);
+) charset = utf8;
 
 -- INSERT INTO `tamedia_listings` (`record.saleType`,`record.source`,`record.language`,`record.originalPropertyCategory`,`record.propertyCategory`,`record.sellerType`,`record.price`,`record.netPrice`,`record.propertyLocation.region`,`record.propertyLocation.canton`,`record.propertyLocation.cantonCode`,`record.propertyLocation.country`,`record.propertyLocation.countryCode`,`record.propertyLocation.city`,`record.propertyLocation.street`,`record.propertyLocation.zip`, `record.publishedDate`)
 -- VALUES
