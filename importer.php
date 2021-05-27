@@ -1,7 +1,7 @@
 <?php
 
-//$file = 'is24-2021-04-30';
-$file = 'ff-2021-04-30';
+$file = 'is24-2021-04-30';
+//$file = 'ff-2021-04-30';
 
 $json_file = file_get_contents('./sql-data/' . $file .'.jsonl');
 
@@ -31,7 +31,7 @@ if(empty($jsons[count($jsons)-1])) {
 //record.url
 
 $insert_into = <<<SQL
-    INSERT INTO `tamedia_listings` (`record.adId`, `record.saleType`,`record.source`,`record.language`,`record.originalPropertyCategory`,`record.propertyCategory`,`record.sellerType`,`record.price`,`record.netPrice`,`record.propertyLocation.region`,`record.propertyLocation.canton`,`record.propertyLocation.cantonCode`,`record.propertyLocation.country`,`record.propertyLocation.countryCode`,`record.propertyLocation.city`,`record.propertyLocation.street`,`record.propertyLocation.zip`, `record.publishedDate`, `record.url`) VALUES
+    INSERT INTO `tamedia_listings` (`record.adId`, `record.saleType`,`record.source`,`record.language`,`record.originalPropertyCategory`,`record.propertyCategory`,`record.paymentInterval`,`record.sellerType`,`record.price`,`record.netPrice`,`record.propertyLocation.region`,`record.propertyLocation.canton`,`record.propertyLocation.cantonCode`,`record.propertyLocation.country`,`record.propertyLocation.countryCode`,`record.propertyLocation.city`,`record.propertyLocation.street`,`record.propertyLocation.zip`, `record.publishedDate`, `record.url`) VALUES
 SQL;
 
 file_put_contents($file . '.sql', $insert_into.PHP_EOL , FILE_APPEND);
@@ -42,8 +42,6 @@ echo $rows;
 
 foreach($jsons as $key => $json) {
 
-  //if($key > 50) break;
-
   $decoded = json_decode($json);
 
   $insert = "(" . $decoded->record->adId . ",";
@@ -52,6 +50,7 @@ foreach($jsons as $key => $json) {
   $insert .= "'" . $decoded->record->language . "',";
   $insert .= "'" . $decoded->record->originalPropertyCategory . "',";
   $insert .= "'" . $decoded->record->propertyCategory . "',";
+  $insert .= "'" . $decoded->record->paymentInterval . "',";
   $insert .= "'" . $decoded->record->sellerType . "',";
   $insert .= ParseFloat($decoded->record->price) . ",";
   $insert .= ParseFloat($decoded->record->netPrice) . ",";
@@ -71,6 +70,9 @@ foreach($jsons as $key => $json) {
   } else {
     $insert .= ',';
   }
+
+  //if($key > 50) break;
+
   //echo $decoded->record->price . PHP_EOL;
   //echo ParseFloat($decoded->record->price) . PHP_EOL;
   //echo $key ." \t" .$insert. PHP_EOL;
