@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1ef6160-d96b-4527-9988-6f7622fc26a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="9e7afb7e-218b-4502-a311-51ddc1030c70" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e6d0efd9-ece7-4d46-9a73-ab164f1eb8dd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e6d0efd9-ece7-4d46-9a73-ab164f1eb8dd.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/create.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ff-2021-04-30.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/importer.php" beforeDir="false" afterPath="$PROJECT_DIR$/importer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is24-2021-04-30.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack.yml" beforeDir="false" afterPath="$PROJECT_DIR$/stack.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,33 +20,22 @@
   <component name="DockerExecCommand">
     <ExecCommand>
       <option name="command" value="bash" />
-      <option name="imageId" value="sha256:c0cdc95609f1fc1daf2c7cae05ebd6adcf7b5c614b4f424949554a24012e3c09" />
+      <option name="imageId" value="sha256:365268e7ce469d5474b0f544ba2995f9f95f06ae28ede5d02f307f693a36783a" />
+    </ExecCommand>
+    <ExecCommand>
+      <option name="command" value="sh" />
+      <option name="imageId" value="sha256:365268e7ce469d5474b0f544ba2995f9f95f06ae28ede5d02f307f693a36783a" />
     </ExecCommand>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1t5Yo9PEklrHEkGN0ogR6cc0jN5" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sql-data" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sql-data" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration name="Tamedia" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
@@ -61,23 +53,11 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="a1ef6160-d96b-4527-9988-6f7622fc26a5" name="Default Changelist" comment="" />
-      <created>1622060590347</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1622060590347</updated>
-      <workItem from="1622060596480" duration="1963000" />
-    </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -89,5 +69,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

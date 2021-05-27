@@ -1,16 +1,16 @@
 <?php
 
-$file = 'is24-2021-04-30';
-//$file = 'ff-2021-04-30';
+//$file = 'is24-2021-04-30';
+$file = 'ff-2021-04-30';
 
-$json_file = file_get_contents('./src/' . $file .'.jsonl');
+$json_file = file_get_contents('./sql-data/' . $file .'.jsonl');
 
 $jsons = explode(PHP_EOL, str_replace("\r", "", $json_file));
 if(empty($jsons[count($jsons)-1])) {
   unset($jsons[count($jsons)-1]);
 }
 
-
+//record.adId
 //record.saleType
 //record.source
 //record.language
@@ -28,9 +28,10 @@ if(empty($jsons[count($jsons)-1])) {
 //record.propertyLocation.street
 //record.propertyLocation.zip
 //record.publishedDate
+//record.url
 
 $insert_into = <<<SQL
-    INSERT INTO `tamedia_listings` (`record.saleType`,`record.source`,`record.language`,`record.originalPropertyCategory`,`record.propertyCategory`,`record.sellerType`,`record.price`,`record.netPrice`,`record.propertyLocation.region`,`record.propertyLocation.canton`,`record.propertyLocation.cantonCode`,`record.propertyLocation.country`,`record.propertyLocation.countryCode`,`record.propertyLocation.city`,`record.propertyLocation.street`,`record.propertyLocation.zip`, `record.publishedDate`) VALUES
+    INSERT INTO `tamedia_listings` (`record.adId`, `record.saleType`,`record.source`,`record.language`,`record.originalPropertyCategory`,`record.propertyCategory`,`record.sellerType`,`record.price`,`record.netPrice`,`record.propertyLocation.region`,`record.propertyLocation.canton`,`record.propertyLocation.cantonCode`,`record.propertyLocation.country`,`record.propertyLocation.countryCode`,`record.propertyLocation.city`,`record.propertyLocation.street`,`record.propertyLocation.zip`, `record.publishedDate`, `record.url`) VALUES
 SQL;
 
 file_put_contents($file . '.sql', $insert_into.PHP_EOL , FILE_APPEND);
@@ -41,11 +42,12 @@ echo $rows;
 
 foreach($jsons as $key => $json) {
 
-  // if($key > 50) break;
+  //if($key > 50) break;
 
   $decoded = json_decode($json);
 
-  $insert = "('" . $decoded->record->saleType . "',";
+  $insert = "(" . $decoded->record->adId . ",";
+  $insert .= "'" . $decoded->record->saleType . "',";
   $insert .= "'" . $decoded->record->source . "',";
   $insert .= "'" . $decoded->record->language . "',";
   $insert .= "'" . $decoded->record->originalPropertyCategory . "',";
@@ -61,7 +63,8 @@ foreach($jsons as $key => $json) {
   $insert .= "'" . addslashes($decoded->record->propertyLocation->city) . "',";
   $insert .= "'" . addslashes($decoded->record->propertyLocation->street) . "',";
   $insert .= "'" . $decoded->record->propertyLocation->zip . "',";
-  $insert .=  strtotime($decoded->record->publishedDate) . ")";
+  $insert .= "'" . date('Y-m-d H:i:s', strtotime($decoded->record->publishedDate)) . "',";
+  $insert .=  "'" . $decoded->record->url . "')";
 
   if($key+1 === $rows) {
     $insert .= ';';

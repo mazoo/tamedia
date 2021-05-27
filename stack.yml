@@ -16,7 +16,7 @@ services:
 
   php:
     image: adminer
-    #build:
+    # build:
     #  context: ./
     #  dockerfile: Dockerfile
     volumes:
