@@ -53,12 +53,12 @@ foreach($jsons as $key => $json) {
   $insert .= "'" . addslashes($decoded->record->propertyLocation->street) . "',";
   $insert .= "'" . $decoded->record->propertyLocation->zip . "',";
   $insert .= "'" . date('Y-m-d H:i:s', strtotime($decoded->record->publishedDate)) . "',";
+  $insert .= "'" . addslashes($decoded->record->url) . "',";
   $insert .= "'" . addslashes($decoded->record->company->logo) . "',";
   $insert .= "'" . addslashes($decoded->record->company->name) . "',";
   $insert .= "'" . (is_array($decoded->record->ownObjectUrl) ? addslashes($decoded->record->ownObjectUrl[0]): '') . "',";
   $insert .= "'" . addslashes($decoded->record->seller->name) . "',";
-  $insert .= "'" . addslashes($decoded->record->seller->image) . "',";
-  $insert .= "'" . addslashes($decoded->record->url) . "')";
+  $insert .= "'" . addslashes($decoded->record->seller->image) . "')";
 
   if($key+1 === $rows) {
     $insert .= ';';
