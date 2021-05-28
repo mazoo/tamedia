@@ -10,28 +10,18 @@ if(empty($jsons[count($jsons)-1])) {
   unset($jsons[count($jsons)-1]);
 }
 
-//record.adId
-//record.saleType
-//record.source
-//record.language
-//record.originalPropertyCategory
-//record.propertyCategory
-//record.sellerType
-//record.price
-//record.netPrice
-//record.propertyLocation.region
-//record.propertyLocation.canton
-//record.propertyLocation.cantonCode
-//record.propertyLocation.country
-//record.propertyLocation.countryCode
-//record.propertyLocation.city
-//record.propertyLocation.street
-//record.propertyLocation.zip
-//record.publishedDate
-//record.url
-
 $insert_into = <<<SQL
-    INSERT INTO `tamedia_listings` (`record.adId`, `record.saleType`,`record.source`,`record.language`,`record.originalPropertyCategory`,`record.propertyCategory`,`record.paymentInterval`,`record.sellerType`,`record.price`,`record.netPrice`,`record.propertyLocation.region`,`record.propertyLocation.canton`,`record.propertyLocation.cantonCode`,`record.propertyLocation.country`,`record.propertyLocation.countryCode`,`record.propertyLocation.city`,`record.propertyLocation.street`,`record.propertyLocation.zip`, `record.publishedDate`, `record.url`) VALUES
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+    INSERT INTO `tamedia_listings` (`record.adId`, `record.saleType`,`record.source`,`record.language`,`record.originalPropertyCategory`,`record.propertyCategory`,`record.paymentInterval`,`record.sellerType`,`record.price`,`record.netPrice`,`record.propertyLocation.region`,`record.propertyLocation.canton`,`record.propertyLocation.cantonCode`,`record.propertyLocation.country`,`record.propertyLocation.countryCode`,`record.propertyLocation.city`,`record.propertyLocation.street`,`record.propertyLocation.zip`, `record.publishedDate`, `record.url`, `record.company.logo`, `record.company.name`, `record.ownObjectUrl`, `record.seller.name`, `record.seller.image`) VALUES
 SQL;
 
 file_put_contents($file . '.sql', $insert_into.PHP_EOL , FILE_APPEND);
@@ -63,7 +53,12 @@ foreach($jsons as $key => $json) {
   $insert .= "'" . addslashes($decoded->record->propertyLocation->street) . "',";
   $insert .= "'" . $decoded->record->propertyLocation->zip . "',";
   $insert .= "'" . date('Y-m-d H:i:s', strtotime($decoded->record->publishedDate)) . "',";
-  $insert .=  "'" . $decoded->record->url . "')";
+  $insert .= "'" . addslashes($decoded->record->company->logo) . "',";
+  $insert .= "'" . addslashes($decoded->record->company->name) . "',";
+  $insert .= "'" . (is_array($decoded->record->ownObjectUrl) ? addslashes($decoded->record->ownObjectUrl[0]): '') . "',";
+  $insert .= "'" . addslashes($decoded->record->seller->name) . "',";
+  $insert .= "'" . addslashes($decoded->record->seller->image) . "',";
+  $insert .= "'" . addslashes($decoded->record->url) . "')";
 
   if($key+1 === $rows) {
     $insert .= ';';
@@ -71,13 +66,14 @@ foreach($jsons as $key => $json) {
     $insert .= ',';
   }
 
-  //if($key > 50) break;
+  //if($key > 17000) break;
 
   //echo $decoded->record->price . PHP_EOL;
   //echo ParseFloat($decoded->record->price) . PHP_EOL;
   //echo $key ." \t" .$insert. PHP_EOL;
   //echo $key.PHP_EOL;
   //echo $rows.PHP_EOL;
+
   file_put_contents($file . '.sql', $insert.PHP_EOL , FILE_APPEND);
 }
 

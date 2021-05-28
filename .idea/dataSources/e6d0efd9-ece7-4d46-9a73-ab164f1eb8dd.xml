@@ -1011,5 +1011,25 @@ SELECT|sys.sys_config
       <Position>21</Position>
       <DataType>varchar(256)|0s</DataType>
     </column>
+    <column id="306" parent="284" name="record.company.logo">
+      <Position>22</Position>
+      <DataType>varchar(256)|0s</DataType>
+    </column>
+    <column id="307" parent="284" name="record.company.name">
+      <Position>23</Position>
+      <DataType>varchar(256)|0s</DataType>
+    </column>
+    <column id="308" parent="284" name="record.ownObjectUrl">
+      <Position>24</Position>
+      <DataType>varchar(256)|0s</DataType>
+    </column>
+    <column id="309" parent="284" name="record.seller.name">
+      <Position>25</Position>
+      <DataType>varchar(256)|0s</DataType>
+    </column>
+    <column id="310" parent="284" name="record.seller.image">
+      <Position>26</Position>
+      <DataType>varchar(256)|0s</DataType>
+    </column>
   </database-model>
 </dataSource>

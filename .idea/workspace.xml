@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e7afb7e-218b-4502-a311-51ddc1030c70" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/examples.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e6d0efd9-ece7-4d46-9a73-ab164f1eb8dd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e6d0efd9-ece7-4d46-9a73-ab164f1eb8dd.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ff-2021-04-30.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ff-2021-04-30.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importer.php" beforeDir="false" afterPath="$PROJECT_DIR$/importer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/is24-2021-04-30.sql" beforeDir="false" afterPath="$PROJECT_DIR$/is24-2021-04-30.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is24-2021-04-30.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +34,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1t7HDPHIm46rcV3MbBnDHw68564" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sql-data" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -46,11 +56,12 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/sql-data" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -69,6 +80,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
   </component>
@@ -80,8 +92,26 @@
       <option name="project" value="LOCAL" />
       <updated>1622104452071</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Few field changes">
+      <created>1622107502474</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1622107502474</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9e7afb7e-218b-4502-a311-51ddc1030c70" name="Default Changelist" comment="" />
+      <created>1622113086291</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622113086291</updated>
+      <workItem from="1622113087585" duration="5360000" />
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
