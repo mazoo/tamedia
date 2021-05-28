@@ -12,7 +12,7 @@ Google Firebase free of charge, I uploaded not the full content.
 
 ## Technical Organisation
 ### Docker
-To work quickly with the right tools, I fired up two [Docker](stack.yml) containers to work with PHP and MySQL.
+To work quickly with the right tools, I fired up two [Docker](stack.yml) containers to work with PHP and MySQL using the PHPStorm.
 ### PHP & MySQL
 * Step 1: Transform JSON-lines files to MySQL inserts ([PHP](importer.php))
 * Step 2: [Create](./create.sql) the database and import the MySQL insert files ([Flatfox](./ff-2021-04-30.sql), [Immoscout](./is24-2021-04-30.sql))

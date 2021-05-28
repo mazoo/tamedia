@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e7afb7e-218b-4502-a311-51ddc1030c70" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/create.sql" afterDir="false" />
-    </list>
+    <list default="true" id="9e7afb7e-218b-4502-a311-51ddc1030c70" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622113086291</updated>
       <workItem from="1622113087585" duration="7016000" />
-      <workItem from="1622188708882" duration="2045000" />
+      <workItem from="1622188708882" duration="2707000" />
     </task>
     <task id="LOCAL-00003" summary="Update">
       <created>1622185645307</created>
@@ -119,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622186820264</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Documentation">
+      <created>1622192776490</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622192776490</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +143,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Few field changes" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentation" />
   </component>
 </project>
